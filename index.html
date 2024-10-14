@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="rightNavbar v-class">
+            <ol class="navbarList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutPage.html">About</a></li>
+                <li><a href="addRecipe.html">Add Recipe</a></li>
+            </ol>
+        </div>
+        <div class="leftNavbar">
+            <input type="text" name="Search" id="search" placeholder="Search for recipes..." oninput="searchRecipes()">
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <section class="firstSection">
+        <div class="firstbackground">
+        <div class="welcome">
+            Welcome To Recipe Book
+        </div>
+    </section>
+
+    <section class="secondSection">
+        <div id="recipeGrid" class="recipe-grid"></div>
+    </section> 
+    
+    <div id="recipeDetails" class="recipe-details" style="display:none;">
+        <button onclick="closeDetails()">Close</button>
+        <h2 id="detailsName"></h2>
+        <h3>Ingredients:</h3>
+        <p class="preparation" id="detailsIngredients"></p>
+        <h3>Preparation Steps:</h3>
+        <div class="preparation" id="detailsSteps"></div>
+    </div>
+    <br><br><br>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>
+                    Find free, easy-to-follow recipes you can cook at home.From timeless classics to modern trends, budget dinners to entertaining delights, save your favourite recipes..
+                </p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="addRecipe.html">Add Recipe</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h3>Contact Us</h3>
+                <p>Email: recipebook@gmail.com</p>
+                <p>Phone: +1 763 888 7785</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Recipe Book | All rights reserved.
+        </div>
+    </footer>
+    
+    <script src="index.js"></script>
+</body>
+</html>

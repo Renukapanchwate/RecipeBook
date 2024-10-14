@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar h-nav">
+        <div class="rightNavbar v-class">
+            <ul class="navbarList ">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutPage.html">About</a></li>
+                <li><a href="addRecipe.html">Add Recipe</a></li>
+            </ul>
+        </div>
+        <div class="leftNavbar v-class">
+            <input type="text" name="Search" id="search" placeholder="Search for recipes..." oninput="searchRecipes()">
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <br>
+    <h2 align="center" style="font-family: fantasy;" >Add Recipe</h2>
+    <br>
+    <form class="recipe" id="recipeForm" align="center">
+        <label>Name:</label><br>
+        <input type="text" id="recipeName" placeholder="Recipe Name" required><br><br>
+        
+        <label>Ingredients:</label><br>
+        <input type="text" id="ingredientInput" placeholder="Add ingredient" required>
+        <button type="button" onclick="addIngredient()">Add Ingredient</button>
+        <ol class="ingredients" id="ingredientList"></ol><br>
+        
+        <label>Preparation Steps:</label><br>
+        <input type="text" id="stepInput" placeholder="Add step" required>
+        <button type="button" onclick="addStep()">Add Step</button>
+        <ol class="ingredients" id="stepList"></ol><br>
+        
+        <label>Image:</label><br>
+        <input type="file" id="recipeImage" accept="image/*" required><br><br>
+        
+        <button type="button" onclick="addRecipe()">Add Recipe</button>
+    </form>    
+  </section>
+  
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>
+                Welcome to our Recipe Book! We are passionate about food and sharing delicious recipes. 
+                Our goal is to inspire home cooks to create amazing meals.
+            </p>
+        </div>
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="addRecipe.html">Add Recipe</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact-form">
+            <h3>Contact Us</h3>
+            <p>Email: recipebook@gmail.com</p>
+            <p>Phone: +1 763 888 7785</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 Recipe Book | All rights reserved.
+    </div>
+</footer>
+  <script src="index.js"></script>
+</body>
+</html>
